@@ -1,0 +1,42 @@
+
+@import '../assets/styles/reset.css';
+
+.navbar-spacer {
+  flex: 1 1 auto;
+}
+
+.navbar {
+  z-index: 2;
+}
+
+.navbar-brand {
+  display: flex;
+  text-decoration: none;
+  color: #454545;
+  align-items: center;
+}
+
+.logo {
+  height: 35px;
+  float: left;
+}
+
+.mat-toolbar {
+  background: #fafbfc;
+  border-bottom: 1px solid #ddd;
+}
+
+.container {
+  flex: 1;
+}
+
+a.mat-list-item.active {
+  background: rgba(0, 0, 0, .04);
+}
+
+footer {
+  margin: 0 15px;
+  padding: 10px;
+  border-top: 1px solid #ddd;
+  color: #777
+}
