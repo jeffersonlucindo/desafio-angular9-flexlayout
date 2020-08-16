@@ -5,14 +5,22 @@ import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatToolbarModule } from '@angular/material/toolbar';
 
+import { LoaderComponent } from './loader/loader/loader.component';
+import { MatProgressBarModule } from '@angular/material/progress-bar';
+import { HomeModule } from './home/home.module';
+
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    LoaderComponent,
+    
   ],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
-    MatToolbarModule
+    MatToolbarModule,
+    MatProgressBarModule,
+    HomeModule
   ],
   providers: [],
   bootstrap: [AppComponent]

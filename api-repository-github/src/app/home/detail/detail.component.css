@@ -1,0 +1,28 @@
+.card {
+    border: none;
+    box-shadow: none;
+    color: #454545
+}
+
+.card a {
+    color: #028090
+}
+
+.avatar {
+    background-size: cover;
+    border: 1px solid #eee
+}
+
+.description {
+    font-size: 1rem;
+    line-height: 1.5rem;
+    color: #6f6f6f
+}
+
+.stats {
+    color: #8c8c8c
+}
+
+.footer {
+    border-top: 1px solid #ddd
+}

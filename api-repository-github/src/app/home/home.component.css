@@ -1,0 +1,50 @@
+.hero {
+    text-align: center;
+    color: #454545;
+    background: #fafbfc;
+}
+
+.hero h1 {
+    color: #414141;
+    font-size: 46px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 900;
+    letter-spacing: 1.5px;
+}
+
+.hero .subtitle {
+    color: #586069
+}
+
+::ng-deep .mat-input-element {
+    caret-color: #028090!important;
+}
+
+::ng-deep .mat-form-field.mat-focused .mat-form-field-label {
+    color: #028090!important;
+}
+
+::ng-deep .mat-form-field.mat-focused .mat-form-field-ripple {
+    background-color: #028090!important;
+}
+
+.card {
+    height: 100%;
+    cursor: pointer;
+    box-shadow: none;
+    border: 1px solid #dcdee4;
+    transition: border .3s ease-in-out;
+}
+
+.card:hover {
+    border-color: #028090;
+}
+
+.card a {
+    color: #028090
+}
+
+.stats {
+    color: #8c8c8c
+}
+

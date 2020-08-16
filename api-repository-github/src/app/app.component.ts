@@ -15,7 +15,9 @@ import { Component } from '@angular/core';
           </mat-toolbar>
       </div>
       <div class="container-fluid">
+        <app-loader></app-loader>
 
+        <app-home></app-home>       
       </div>
       <footer class="mt-auto">
         <div class="row">

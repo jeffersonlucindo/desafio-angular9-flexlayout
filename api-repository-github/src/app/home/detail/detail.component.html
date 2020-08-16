@@ -1,0 +1,47 @@
+<mat-dialog-content class="mat-typography">
+    <mat-card class="card p-0">
+        <mat-card-header>
+            <div mat-card-avatar class="avatar" [style.backgroundImage]="'url('+ repo.owner.avatar_url +')'">
+            </div>
+            <mat-card-title>{{ repo.name }}</mat-card-title>
+            <mat-card-subtitle>
+                <a [href]="repo.html_url">{{ repo.full_name }}</a>
+            </mat-card-subtitle>
+        </mat-card-header>
+        <mat-card-content>
+            <p class="description">
+                {{ repo.description }}
+            </p>
+        </mat-card-content>
+        <mat-card-actions>
+            <div class="row m-0 pb-2 stats">
+                <div class="col-auto d-flex align-items-center" title="Stars">
+                    <mat-icon class="mr-2" aria-hidden="false" aria-label="Stars">star</mat-icon>
+                    {{ repo.stargazers_count }}
+                </div>
+                <div class="col-auto d-flex align-items-center" title="Forks">
+                    <mat-icon class="mr-2" aria-hidden="false" aria-label="Forks">mediation</mat-icon>
+                    {{ repo.forks_count }}
+                </div>
+                <div class="col-auto d-flex align-items-center text-right" title="Linguagem">
+                    <mat-icon class="mr-2" aria-hidden="false" aria-label="Linguagem">code</mat-icon>
+                    {{ repo.language || 'Nāo informado' }}
+                </div>
+                <div  class="col d-flex align-items-center text-right" title="Licenca">
+                    <mat-icon class="mr-2" aria-hidden="false" aria-label="Licenca">local_police</mat-icon>
+                    {{ repo.license? repo.license.name : 'Não informado' }}
+                </div>
+                <div class="col-auto d-flex align-items-center text-right" title="Licenca">
+                    <mat-icon class="mr-2" aria-hidden="false" aria-label="Licenca">account_circle</mat-icon>
+                    Criado por {{ repo.owner.login }}
+                </div>
+            </div>
+        </mat-card-actions>
+    </mat-card>
+</mat-dialog-content>
+<mat-dialog-actions class="footer mt-3" align="end">
+    <button color="link" (click)="download()" target="_blank" mat-button mat-dialog-close>
+        <mat-icon matSuffix class="mr-3">get_app</mat-icon>
+        Baixar
+    </button>
+</mat-dialog-actions>

@@ -1,0 +1,65 @@
+<div class="hero p-4">
+    <h1>Encontre repositórios</h1>
+    <span class="subtitle">Descubra um universo de possibilidades disponíveis em OpenSource</span>
+  
+    <div class="row justify-content-center">
+        <mat-form-field class="col-12 col-md-10 col-lg-6 mt-4 search-bar">
+            <mat-label>Buscar</mat-label>
+            <input
+                matInput
+                placeholder="Qual repositório está procurando?" 
+                autofocus="true"
+                [(ngModel)]="term"
+                (keyup)="search()"
+                (change)="search()">
+                
+                <button
+                mat-button
+                *ngIf="term"
+                matSuffix 
+                mat-icon-button 
+                aria-label="Limpar" 
+                (click)="clear()">
+                <mat-icon>close</mat-icon>
+            </button>
+            <mat-icon matSuffix class="mr-3 mb-0">search</mat-icon>
+        </mat-form-field>
+    </div>
+</div>
+
+<div class="container-fluid mt-4">
+    <app-empty *ngIf="!repositories.length"></app-empty>
+    <div class="row">
+        <div *ngFor="let repo of repositories" class="col-12 col-md-6 col-lg-4 col-xl-3 card-item mb-4">
+            <mat-card class="card" (click)="viewDetails(repo)">
+                <mat-card-header>
+                    <mat-card-title>{{ repo.name }}</mat-card-title>
+                    <mat-card-subtitle>
+                        <a [href]="repo.html_url">{{ repo.full_name }}</a>
+                    </mat-card-subtitle>
+                </mat-card-header>
+                <mat-card-content class="col-12">
+                    <p class="description">
+                        Criado por {{ repo.owner.login }}
+                    </p>
+                </mat-card-content>
+                <mat-card-actions>
+                    <div class="row m-0 pb-2 stats">
+                        <div class="col-auto d-flex align-items-center">
+                            <mat-icon class="mr-2" aria-hidden="false" aria-label="Stars">star</mat-icon>
+                            {{ repo.stargazers_count }}
+                        </div>
+                        <div class="col d-flex align-items-center">
+                            <mat-icon class="mr-2" aria-hidden="false" aria-label="Forks">mediation</mat-icon>
+                            {{ repo.forks_count }}
+                        </div>
+                        <div class="col-auto d-flex align-items-center text-right">
+                            <mat-icon class="mr-2" aria-hidden="false" aria-label="Linguagem">code</mat-icon>
+                            {{ repo.language || 'Nāo informado' }}
+                        </div>
+                    </div>
+                </mat-card-actions>
+            </mat-card>
+        </div>
+    </div>
+</div>
