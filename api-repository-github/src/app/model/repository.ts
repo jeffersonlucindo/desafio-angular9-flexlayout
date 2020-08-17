@@ -3,7 +3,7 @@ export interface Repository {
     node_id: string;
     name: string;
     full_name: string;
-    private: string;
+    private: boolean;
     owner: {
         login: string;
         id: number;
@@ -22,7 +22,7 @@ export interface Repository {
         received_events_url: string;
         type: string;
         site_admin: boolean;
-    },
+    };
     html_url: string;
     description: string;
     fork: boolean;
@@ -63,9 +63,9 @@ export interface Repository {
     labels_url: string;
     releases_url: string;
     deployments_url: string;
-    created_at: Date;
-    updated_at: Date;
-    pushed_at: Date;
+    created_at: string;
+    updated_at: string;
+    pushed_at: string;
     git_url: string;
     ssh_url: string;
     clone_url: string;
@@ -73,17 +73,17 @@ export interface Repository {
     homepage: string;
     size: number;
     stargazers_count: number;
-    watchers_count: string;
+    watchers_count: number;
     language: string;
-    has_issues: string;
-    has_projects: string;
-    has_downloads: string;
-    has_wiki: string;
-    has_pages: string;
-    forks_count: string;
+    has_issues: boolean;
+    has_projects: boolean;
+    has_downloads: boolean;
+    has_wiki: boolean;
+    has_pages: boolean;
+    forks_count: number;
     mirror_url: string;
-    archived: string;
-    disabled: string;
+    archived: boolean;
+    disabled: boolean;
     open_issues_count: number;
     license: {
         key: string;

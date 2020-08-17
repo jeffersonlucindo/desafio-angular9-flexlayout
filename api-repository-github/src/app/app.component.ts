@@ -30,4 +30,5 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   year: Date = new Date();
+  title: string = 'api-repository-github';
 }
