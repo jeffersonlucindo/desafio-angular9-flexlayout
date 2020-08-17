@@ -5,6 +5,7 @@ import { TestBed } from '@angular/core/testing';
 import { repositoryFake } from 'src/app/model/repositor-fake';
 import { HttpClientTestingModule } from '@angular/common/http/testing';
 
+
 describe('O componente DetailComponet', () => {
     let component: HomeComponent;
     let dialogSpy: jasmine.Spy;
